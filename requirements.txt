@@ -4,3 +4,5 @@ numpy
 pandas
 pygris
 xarray
+'dask[complete]'
+netcdf4
