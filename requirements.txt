@@ -6,3 +6,4 @@ pygris
 xarray
 dask[complete]
 netcdf4
+h5netcdf
