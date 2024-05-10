@@ -1,0 +1,13 @@
+xarray
+fsspec
+numpy
+hvplot
+geoviews
+holoviews
+cartopy
+dask[complete]
+s3fs
+zarr
+datashader
+dask_gateway 
+netCDF4
