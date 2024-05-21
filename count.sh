@@ -3,12 +3,17 @@
 # Define the directory containing the NetCDF files
 directory="subset"
 
-# Count the number of .nc files
-num_files=$(find "$directory" -type f -name "*.nc" | wc -l)
+while true; do
+    # Count the number of .nc files
+    num_files=$(find "$directory" -type f -name "*.nc" | wc -l)
 
-# Calculate the total size of the .nc files
-total_size=$(find "$directory" -type f -name "*.nc" -exec du -ch {} + | grep total$ | awk '{print $1}')
+    # Calculate the total size of the .nc files
+    total_size=$(find "$directory" -type f -name "*.nc" -exec du -ch {} + | grep total$ | awk '{print $1}')
 
-# Output the results
-echo "Number of files: $num_files"
-echo "Total size: $total_size"
+    # Output the results
+    echo "Number of files: $num_files"
+    echo "Total size: $total_size"
+
+    # Wait for 1 minute before the next iteration
+    sleep 60
+done
